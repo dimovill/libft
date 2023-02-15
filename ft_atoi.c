@@ -6,14 +6,11 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:03:30 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 23:58:05 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:58:44 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(char *str)
 {
@@ -38,16 +35,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (res * signo);
-}
-
-int	main (void)
-{
-	char str[] = "     ---+--+1234ab567";
-	char str1[] = "1234ab567";
-
-	printf("Resultado ft str: %d\n", ft_atoi(str));
-	printf("Resultado ft str1: %d\n", ft_atoi(str1));
-	printf("Resultado atoi str: %d\n", atoi(str));
-	printf("Resultado atoi str1: %d\n", atoi(str1));
-	return(0);
 }

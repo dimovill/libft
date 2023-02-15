@@ -239,4 +239,11 @@ char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
+/**
+ * @brief 
+ * @param str 
+ * @return 
+ */
+int		ft_atoi(char *str);
+
 #endif
