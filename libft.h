@@ -225,4 +225,18 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
  */
 char *ft_strnstr(const char *grande, const char *pequeno, size_t len);
 
+/**
+ * @brief  The ft_strlcat() function appends the NUL-terminated string src
+ * to the end of dst.  It will append at most size - strlen(dst) - 1 bytes,
+ * terminating the result.
+ * @param dst String destiny
+ * @param src String Source
+ * @param size n Bytes to concatenate.
+ * @return The ft_strlcat() functions return the total length of
+ * the string they tried to create.For strlcat() that means the initial
+ * length of dst plus the length of src.  While this may seem somewhat 
+ * confusing it was done to make trunca-tion truncation detection simple.
+ */
+size_t ft_strlcat(char *dst, const char *src, size_t size);
+
 #endif
