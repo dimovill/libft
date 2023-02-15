@@ -187,5 +187,42 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
  */
 void *ft_memcpy(void *s1, const void *s2, size_t n);
 
+/**
+ * @brief The memmove() function copies n bytes from string s2 to 
+ * string s1.  The two strings may overlap; the copy is always 
+ * done in a non-destructive manner.
+ * @param s1 String destiny
+ * @param s2 String source
+ * @param n Number of bytes to copy
+ * @return The String s1 copied with de characters of s2 n bytes.
+ */
+void *ft_memmove(void *s1, const void *s2, size_t n);
+
+/**
+ * @brief The strlcpy() function copies up to size - 1 characters from the
+ *  NUL-terminated string src to dst, NUL-terminating 
+ * the result.
+ * @param dst String destiny
+ * @param src String source
+ * @param dstsize Number -1 bytes copies.
+ * @return The strlcpy() function return the total 
+ * length of the string they tried to create. For strlcpy() that means
+ * the length of src.
+ */
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+
+/**
+ * @brief The strnstr() function locates the first occurrence of the
+ *  null-termi-nated null-terminated string s2 in the string s1,
+ * where not more than n characters are searched. Characters that appear
+ *  after a `\0' character are not searched.
+ * @param grande Big string tha must be looked.
+ * @param pequeno  Small string will be searched in s
+ * @param len Number of bytes fron s must be looked.
+ * @return If find is an empty string, s is returned; if find occurs nowhere
+ *  in s, NULL is returned; otherwise a pointer to the first character of the
+ * first occurrence of s2 is returned
+ */
+char *ft_strnstr(const char *grande, const char *pequeno, size_t len);
 
 #endif
