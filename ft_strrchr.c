@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	 i;
-	char *cadena;
-	char caracter;
+	int		i;
+	char	*cadena;
+	char	caracter;
 
 	cadena = (char *)s;
 	caracter = (char)c;
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 			return (&cadena[i]);
 		i--;
 	}
-return (NULL);
+	return (NULL);
 }
 
 size_t	ft_strlen(char *array)

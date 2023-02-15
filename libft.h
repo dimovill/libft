@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -29,14 +29,14 @@ typedef struct s_list
  * @param c1 Character
  * @return Return 0 if c isn't Alphanumeric
  * Return 1 if c is Alphanumeric*/
-int	ft_isalpha(int c);
+int		ft_isalpha(int c);
 
 /** 		ISDIGIT
  *  @brief The ft_isdigit function tests for a decimal
  *  digit character
  * @param d Character
  * @return Return 0 (Non decimal-False) Return 1 (Decimal- True)*/	
-int	ft_isdigit(int d);
+int		ft_isdigit(int d);
 
 /**								ISALNUM
  * @brief	Check that it is alphanumeric.
@@ -56,7 +56,7 @@ int		ft_isalnum(int d);
  * @return Return 0 (Non ASCII-False) 
  * 					Return 1 (ASCII- True)
  */
-int	ft_isascii(int d);
+int		ft_isascii(int d);
 
 /**			ISPRINT
  * @brief The ft_isprint function tests for any printing character,
@@ -65,7 +65,7 @@ int	ft_isascii(int d);
  * @return Return 0 (Non printable) 
  * 					Return 1 (Printable)
  */
-int	ft_isprint(int d);
+int		ft_isprint(int d);
 
 /**			TOUPPER
  * @brief The ft_toupper function converts a lower-case letter to the
@@ -74,7 +74,7 @@ int	ft_isprint(int d);
  * @param c Lowercase character
  * @return Return c converted in Uppercase.
  */
-int	ft_toupper(int c);
+int		ft_toupper(int c);
 
 /**			TOLOWER
  * @brief The ft_tolower function converts a upper-case letter to the
@@ -83,7 +83,7 @@ int	ft_toupper(int c);
  * @param c Uppercase character
  * @return Return c converted in Lowercase.
  */
-int	ft_tolower(int d);
+int		ft_tolower(int d);
 
 /**			STRCHR
  * @brief The strchr() function locates the FIRST occurrence of c
@@ -94,7 +94,7 @@ int	ft_tolower(int d);
  * @param c Character we want to locate
  * @return a pointer to the located character.
  */
-char *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 /**			STRRCHR
  * @brief The strrchr() function locates the LAST occurrence of c
@@ -105,7 +105,7 @@ char *ft_strchr(const char *s, int c);
  * @param c Character we want to locate
  * @return a pointer to the located character.
  */
-char *ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 /**
  * @brief The ft_strlen function computes the length of the string array.
@@ -113,7 +113,7 @@ char *ft_strrchr(const char *s, int c);
  * @return  The ft_strlen function returns the number of characters that 
  * precede the terminating NUL character.
  */
-size_t ft_strlen(char *array);
+size_t	ft_strlen(char *array);
 
 /**
  * @brief The strcmp() and strncmp() functions lexicographically compare
@@ -129,7 +129,7 @@ size_t ft_strlen(char *array);
  *  or less than the string s2.  The comparison is done using unsigned
  *  characters, characters, so that `\200' is greater than `\0'.
  */
-int ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 /**			BZERO
  * @brief The ft_bzero() function writes n zeroed bytes to the string s.
@@ -138,7 +138,7 @@ int ft_strncmp(char *s1, char *s2, unsigned int n);
  * @param n numbers of bytes must be zero.
  * @return Nothing
  */
-void ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 /**
  * @brief The memset() function writes n bytes of value c (converted
@@ -148,7 +148,7 @@ void ft_bzero(void *s, size_t n);
  * @param len Number of bytes to write with character
  * @return String b with the chages.
  */
-void *ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 /**
  * @brief The memchr() function locates the first occurrence 
@@ -159,7 +159,7 @@ void *ft_memset(void *b, int c, size_t len);
  * @return The memchr() function returns a pointer to the byte 
  * located, or NULL if no such byte exists within n bytes.
  */
-void *ft_memchr(const void *s, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 /**
  * @brief The memcmp() function compares byte string s1 against byte
@@ -173,7 +173,7 @@ void *ft_memchr(const void *s, int c, size_t n);
  * `\200' is greater than `\0', for example).
  * Zero-length strings are always identical.
  */
-int ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**
  * @brief  The memcpy() function copies n bytes from memory area s2 to 
@@ -185,7 +185,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
  * @param n Number of byte to copy.
  * @return Pointer to string destiny.
  */
-void *ft_memcpy(void *s1, const void *s2, size_t n);
+void	*ft_memcpy(void *s1, const void *s2, size_t n);
 
 /**
  * @brief The memmove() function copies n bytes from string s2 to 
@@ -196,7 +196,7 @@ void *ft_memcpy(void *s1, const void *s2, size_t n);
  * @param n Number of bytes to copy
  * @return The String s1 copied with de characters of s2 n bytes.
  */
-void *ft_memmove(void *s1, const void *s2, size_t n);
+void	*ft_memmove(void *s1, const void *s2, size_t n);
 
 /**
  * @brief The strlcpy() function copies up to size - 1 characters from the
@@ -223,7 +223,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
  *  in s, NULL is returned; otherwise a pointer to the first character of the
  * first occurrence of s2 is returned
  */
-char *ft_strnstr(const char *grande, const char *pequeno, size_t len);
+char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
 
 /**
  * @brief  The ft_strlcat() function appends the NUL-terminated string src
@@ -237,6 +237,6 @@ char *ft_strnstr(const char *grande, const char *pequeno, size_t len);
  * length of dst plus the length of src.  While this may seem somewhat 
  * confusing it was done to make trunca-tion truncation detection simple.
  */
-size_t ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif

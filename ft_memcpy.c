@@ -14,9 +14,10 @@
 
 void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	char *entra;
-	char *sale;
-	size_t ind;
+	char	*entra;
+	char	*sale;
+	size_t	ind;
+
 	entra = (char *)s1;
 	sale = (char *)s2;
 	ind = 0;

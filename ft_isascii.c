@@ -6,15 +6,15 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:16:01 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/13 09:16:01 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:12:21 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii (int d)
+int	ft_isascii(int d)
 {
-	if (d >= 0 && d <= 127 )
+	if (d >= 0 && d <= 127)
 		return (1);
 	else
 		return (0);

@@ -6,13 +6,13 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:16:06 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/13 09:16:06 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:13:17 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit (int d)
+int	ft_isdigit(int d)
 {
 	if (d >= '0' && d <= '9')
 		return (1);

@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	char *cadena;
-	char character;
+	int		i;
+	char	*cadena;
+	char	character;
 
 	character = (char)c;
 	i = 0;

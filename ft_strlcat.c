@@ -6,7 +6,7 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 08:40:54 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 08:40:54 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:43:39 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	idst;
 	int	isrc;
-	int dstorig;
-	int srcorig;
+	int	dstorig;
+	int	srcorig;
+
 	dstorig = ft_strlen(dst);
 	srcorig = ft_strlen(src);
 	idst = 0;

@@ -22,13 +22,13 @@ appropriately depending on the object pointed to by s1 is greater than,
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t ind;
+	size_t	ind;
 
 	ind = 0;
 	while (ind < n)
 	{
-		if (((unsigned char*)s1)[ind] != ((unsigned char*)s2)[ind])
-			return (((unsigned char*)s1)[ind] - ((unsigned char*)s2)[ind]);
+		if (((unsigned char *)s1)[ind] != ((unsigned char *)s2)[ind])
+			return (((unsigned char *)s1)[ind] - ((unsigned char *)s2)[ind]);
 		ind++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 00:57:23 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 01:28:09 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:44:10 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t indice;
+	size_t	indice;
 
 	indice = 0;
 	size = size - 1;

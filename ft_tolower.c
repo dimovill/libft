@@ -6,13 +6,13 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:16:42 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/13 22:07:23 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:47:25 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower (int d)
+int	ft_tolower(int d)
 {
 	if (d >= 'A' && d <= 'Z')
 	{

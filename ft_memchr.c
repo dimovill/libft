@@ -17,22 +17,20 @@ in the first n bytes (converted in unsigned char).*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	unsigned char *punt;
-	unsigned char caracter;
+	size_t			i;
+	unsigned char	*punt;
+	unsigned char	caracter;
+
 	punt = (unsigned char *)s;
 	caracter = (unsigned char)c;
 	i = 0;
-
 	while (i < n)
+	{
+		if ((punt)[i] == caracter)
 		{
-			//if (*(punt + i) == caracter)
-			if ((punt)[i] == caracter)
-			{
-				//return (punt + i);
-				return (&(punt)[i]);
-			}
-			i++;
+			return (&(punt)[i]);
 		}
-		return 0;
+			i++;
+	}
+	return (0);
 }

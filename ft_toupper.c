@@ -6,13 +6,13 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:17:00 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/13 22:07:44 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:47:49 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper (int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

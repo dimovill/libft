@@ -6,16 +6,16 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 09:16:15 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/13 09:16:15 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:14:13 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint (int d)
+int	ft_isprint(int d)
 {
-	if (d >= 32 && d <= 126 )
+	if (d >= 32 && d <= 126)
 		return (1);
-			else
+	else
 		return (0);
 }

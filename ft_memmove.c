@@ -6,7 +6,7 @@
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 00:38:41 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 00:38:41 by dimolina         ###   ########.fr       */
+/*   Updated: 2023/02/15 21:41:50 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 		return (0);
 	if (sale < entra)
 	{
-			while (n > 0)
-			{
-				n--;
-				entra[n] = sale[n];
-			}
+		while (n-- > 0)
+		{
+			entra[n] = sale[n];
+		}
 	}
-	else 
-			while (ind < n)
-			{
+	else
+	{
+		while (ind < n)
+		{
 				entra[ind] = sale[ind];
 				ind++;
-			}
-	
+		}
+	}
 	return (s1);
 }
