@@ -280,4 +280,24 @@ If length is 0, the output is blank.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
+/**
+ * @brief Rerserve memory with malloc and Join two strings.
+ * @param s1 First string
+ * @param s2 String to join to s1
+ * @return Return null if reserve memory si failed. Return
+ * a new string, that is the result to join s1 and s2
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/**
+ * @brief Delete all string set in s1, since the begining and
+ * since the end. The function stop when a character non 'set).
+ * @param s1 The original string.
+ * @param set Charaters that can be delete in s1
+ * @return The result string with malloc reserve.
+ * @return Null if reserve is fail.
+ */
+char	*ft_strtrim(char const *s1, char const *set);
+
+
 #endif
