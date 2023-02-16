@@ -240,10 +240,44 @@ char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
- * @brief 
- * @param str 
- * @return 
+ * @brief The atoi() function converts the initial portion of the 
+ * string pointed to by str to int representation.
+ * @param str String to convert
+ * @return An integrer
  */
 int		ft_atoi(char *str);
+
+/**
+ * @brief The calloc() function contiguously allocates enough space for count
+ * objects that are size bytes of memory each and returns a pointer to the
+ * allocated memory.  The allocated memory is filled with bytes of
+ * value zero.
+ * @param nmemb
+ * @param size
+ * @return a pointer to allocated memory
+ */
+void	*ft_calloc(unsigned int nmemb, unsigned int size);
+
+/**
+ * @brief The strdup() function allocates sufficient memory for a copy of the
+     string s1, does the copy, and returns a pointer to it.  The pointer may
+     subsequently be used as an argument to the function free(3).
+
+     If insufficient memory is available, NULL is returned and errno is set to
+     ENOMEM.
+ * @param s String to be copied	
+ * @return A pointer to the new string
+ */
+char	*ft_strdup(const char *s);
+
+/**
+ * @brief Reserves and Returns a specified substring from a string.
+ * @param s The value to extract the substring from.
+ * @param start The starting character position of the substring
+ * @param len The number of characters in the substring.
+If length is 0, the output is blank.
+ * @return The substring. Null if the memory reserve fail.
+ */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
