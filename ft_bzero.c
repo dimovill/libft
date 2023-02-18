@@ -17,11 +17,11 @@ void	ft_bzero(void *s, size_t n)
 	char	*cadena;
 	size_t	d;
 
-	cadena = (char *s);
-	ind = 0;
-	while (ind < n)
+	cadena = s;
+	d = 0;
+	while (d < n)
 	{
-		cadena[ind] = '\0';
-		ind++;
+		cadena[d] = '\0';
+		d++;
 	}
 }
