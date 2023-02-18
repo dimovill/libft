@@ -23,6 +23,17 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+/**    ATOI
+ * @brief The atoi() function converts an integer value from a string of
+ *characters. The input string is a character string that may be turned
+ *into a return type numeric value. The function stops reading the input
+ *string when it encounters the first character that it does not consider 
+ * part of a number.
+ * @param str String to convert
+ * @return An integrer
+ */
+int		ft_atoi(char *str);
+
 /**			ISALPHA 
  * @brief The ft_isalpha function tests for any 
  * character for which isupper or islower is true.
@@ -239,13 +250,7 @@ char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
-/**
- * @brief The atoi() function converts the initial portion of the 
- * string pointed to by str to int representation.
- * @param str String to convert
- * @return An integrer
- */
-int		ft_atoi(char *str);
+
 
 /**
  * @brief The calloc() function contiguously allocates enough space for count
