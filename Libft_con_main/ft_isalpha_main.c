@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 23:26:32 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 21:07:12 by dimolina         ###   ########.fr       */
+/*   Created: 2023/02/13 09:15:50 by dimolina          #+#    #+#             */
+/*   Updated: 2023/02/13 22:02:08 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
-#include <stddef.h>
+
+int	ft_isalpha(int c1)
+{
+	if ((c1 >= 97 && c1 <= 122) || (c1 >= 65 && c1 <= 90))
+		return (1);
+	else
+		return (0);
+}
 #include <stdio.h>
 
-
-void	ft_bzero(void *s, size_t n)
-{
-	char	*cadena;
-	size_t	d;
-
-	cadena = s;
-	d = 0;
-	while (d < n)
-	{
-		cadena[d] = '\0';
-		d++;
-	}
-}
+int ft_isalpha(int c);
 
 int main()
 {
-    char str[] = "This is a string";
+    char c;
     
-    printf("Before: %s\n", str);
+    printf("Enter a character: ");
+    scanf("%c", &c);
     
-    ft_bzero(str, 5);
-    
-    printf("After: %s\n", str);
+    if (ft_isalpha(c))
+    {
+        printf("The character '%c' is an alphabetic character.\n", c);
+    }
+    else
+    {
+        printf("The character '%c' is not an alphabetic character.\n", c);
+    }
     
     return 0;
 }

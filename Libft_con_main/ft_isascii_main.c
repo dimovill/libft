@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dimolina <dimolina@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 23:26:32 by dimolina          #+#    #+#             */
-/*   Updated: 2023/02/15 21:07:12 by dimolina         ###   ########.fr       */
+/*   Created: 2023/02/13 09:16:01 by dimolina          #+#    #+#             */
+/*   Updated: 2023/02/15 21:12:21 by dimolina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
-#include <stddef.h>
 #include <stdio.h>
-
-
-void	ft_bzero(void *s, size_t n)
+int	ft_isascii(int d)
 {
-	char	*cadena;
-	size_t	d;
-
-	cadena = s;
-	d = 0;
-	while (d < n)
-	{
-		cadena[d] = '\0';
-		d++;
-	}
+	if (d >= 0 && d <= 127)
+		return (1);
+	else
+		return (0);
 }
-
 int main()
 {
-    char str[] = "This is a string";
+    char c;
     
-    printf("Before: %s\n", str);
+    printf("Enter a character: ");
+    scanf("%c", &c);
     
-    ft_bzero(str, 5);
-    
-    printf("After: %s\n", str);
+    if (ft_isascii(c))
+    {
+        printf("The character '%c' is an ascii character.\n", c);
+    }
+    else
+    {
+        printf("The character '%c' is not an ascii character.\n", c);
+    }
     
     return 0;
 }

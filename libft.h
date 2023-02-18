@@ -43,30 +43,37 @@ int		ft_atoi(char *str);
  */
 void	ft_bzero(void *s, size_t n);
 
-/**			ISALPHA 
- * @brief The ft_isalpha function tests for any 
- * character for which isupper or islower is true.
- * @param c1 Character
- * @return Return 0 if c isn't Alphanumeric
- * Return 1 if c is Alphanumeric*/
-int		ft_isalpha(int c);
-
-/** 		ISDIGIT
- *  @brief The ft_isdigit function tests for a decimal
- *  digit character
- * @param d Character
- * @return Return 0 (Non decimal-False) Return 1 (Decimal- True)*/	
-int		ft_isdigit(int d);
+/**			CALLOC
+ * @brief The calloc() function contiguously allocates enough space for count
+ * objects that are size bytes of memory each and returns a pointer to the
+ * allocated memory.  The allocated memory is filled with bytes of
+ * value zero.
+ * @param nmemb
+ * @param size
+ * @return a pointer to allocated memory
+ */
+void	*ft_calloc(unsigned int nmemb, unsigned int size);
 
 /**								ISALNUM
  * @brief	Check that it is alphanumeric.
  * 
  * @param c Character to be checked.
  * 
- * @return True if the character is alphanumeric.
- * @return False if the character is not alphanumeric.
+ * @return True if the character is alphanumeric. Return 1.
+ * @return False if the character is not alphanumeric. Return 0
  **/
 int		ft_isalnum(int d);
+
+/**			ISALPHA 
+ * @brief The ft_isalpha function tests for any 
+ * character for which isupper or islower is true. The function isalpha() 
+ * is used to check that a character is an alphabet or not. This function
+ *  is declared in “ctype.h” header file. It returns an integer value, if
+ *  the argument is an alphabet otherwise, it returns zero.
+ * @param c1 Character
+ * @return Return 0 if c isn't Alphabetic
+ * Return 1 if c is Alphabetic*/
+int		ft_isalpha(int c);
 
 /**			ISASCII
  * @brief The ft_isascii function tests for an ASCII character,
@@ -77,6 +84,23 @@ int		ft_isalnum(int d);
  * 					Return 1 (ASCII- True)
  */
 int		ft_isascii(int d);
+
+/** 		ISDIGIT
+ *  @brief The ft_isdigit function tests for a decimal
+ *  digit character
+ * @param d Character
+ * @return Return 0 (Non decimal-False) Return 1 (Decimal- True)*/
+int ft_isdigit(int d);
+
+
+
+
+
+
+
+
+
+
 
 /**			ISPRINT
  * @brief The ft_isprint function tests for any printing character,
@@ -254,16 +278,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 
 
-/**
- * @brief The calloc() function contiguously allocates enough space for count
- * objects that are size bytes of memory each and returns a pointer to the
- * allocated memory.  The allocated memory is filled with bytes of
- * value zero.
- * @param nmemb
- * @param size
- * @return a pointer to allocated memory
- */
-void	*ft_calloc(unsigned int nmemb, unsigned int size);
+
 
 /**
  * @brief The strdup() function allocates sufficient memory for a copy of the

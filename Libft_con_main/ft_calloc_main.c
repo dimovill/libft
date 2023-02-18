@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+//#include "libft.h"
 /* Libreria stdlib.h
 void *calloc(size_t nmemb, size_t tamanyo);
 Adjudica espacio para un array de nmemb objetos, cada cual tiene
@@ -37,4 +39,32 @@ void	*ft_calloc(unsigned int nmemb, unsigned int size)
 		i++;
 	}
 	return (reserva);
+}
+
+
+void *ft_calloc(unsigned int nmemb, unsigned int size);
+
+int main()
+{
+    int *arr;
+    int i;
+    int n = 5;
+    
+    arr = (int *)ft_calloc(n, sizeof(int));
+    
+    if (arr == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    
+    free(arr);
+    
+    return 0;
 }
