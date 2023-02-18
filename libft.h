@@ -34,6 +34,15 @@ typedef struct s_list
  */
 int		ft_atoi(char *str);
 
+/**			BZERO
+ * @brief The ft_bzero() function writes n zeroed bytes to the string s.
+ * If n is zero, ft_bzero() does nothing.
+ * @param s String
+ * @param n numbers of bytes must be zero.
+ * @return Nothing
+ */
+void	ft_bzero(void *s, size_t n);
+
 /**			ISALPHA 
  * @brief The ft_isalpha function tests for any 
  * character for which isupper or islower is true.
@@ -142,14 +151,7 @@ size_t	ft_strlen(char *array);
  */
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
-/**			BZERO
- * @brief The ft_bzero() function writes n zeroed bytes to the string s.
- * If n is zero, ft_bzero() does nothing.
- * @param s String
- * @param n numbers of bytes must be zero.
- * @return Nothing
- */
-void	ft_bzero(void *s, size_t n);
+
 
 /**
  * @brief The memset() function writes n bytes of value c (converted
