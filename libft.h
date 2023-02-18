@@ -158,6 +158,16 @@ void	*ft_memcpy(void *s1, const void *s2, size_t n);
  */
 void	*ft_memmove(void *s1, const void *s2, size_t n);
 
+/**				MEMSET
+ * @brief The memset() function writes n bytes of value c (converted
+ *  to an unsigned char) to the string s.
+ * @param b Starting address of memory to be filled. String
+ * @param c Character to write
+ * @param len Number of bytes to write with character
+ * @return String b with the chages.
+ */
+void	*ft_memset(void *b, int c, size_t len);
+
 
 
 
@@ -235,15 +245,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 
 
-/**
- * @brief The memset() function writes n bytes of value c (converted
- *  to an unsigned char) to the string s.
- * @param b String
- * @param c Character to write
- * @param len Number of bytes to write with character
- * @return String b with the chages.
- */
-void	*ft_memset(void *b, int c, size_t len);
+
 
 
 
