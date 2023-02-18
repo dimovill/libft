@@ -92,16 +92,6 @@ int		ft_isascii(int d);
  * @return Return 0 (Non decimal-False) Return 1 (Decimal- True)*/
 int ft_isdigit(int d);
 
-
-
-
-
-
-
-
-
-
-
 /**			ISPRINT
  * @brief The ft_isprint function tests for any printing character,
  * including space. ASCII DECIMAL 32 - 126
@@ -110,6 +100,52 @@ int ft_isdigit(int d);
  * 					Return 1 (Printable)
  */
 int		ft_isprint(int d);
+
+/**				ITOA
+ * @brief The itoa() function coverts the integer n into a character
+ * string. Must work with negative numbers.
+ * @param n The integer that wil be converted to character string.
+ * @return The string tha representing the integer. Null if memory reserve
+ * fail
+ */
+char	*ft_itoa(int n);
+
+/**				MEMCHR
+ * @brief The memchr() function locates the first occurrence 
+ * of c (converted to an unsigned char) in string s.
+ * @param s A Pointer ta a String. 
+ * @param c Character to locate
+ * @param n Numbers of bytes to search c into s.
+ * @return The memchr() function returns a pointer to the byte 
+ * located, or NULL if no such byte exists within n bytes.
+ */
+void	*ft_memchr(const void *s, int c, size_t n);
+
+/**
+ * @brief The memcmp() function compares byte string s1 against byte
+ *  string s2. Both strings are assumed to be n bytes long.
+ * @param s1 String 1, (memory)
+ * @param s2 String 2 (memory)
+ * @param n Number of bytes to compare
+ * @return The memcmp() function returns zero if the two strings are 
+ * identical, otherwise returns the difference between the
+ * first two differing bytes(treated as unsigned char values, so that
+ * `\200' is greater than `\0', for example).
+ * Zero-length strings are always identical.
+ */
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**			TOUPPER
  * @brief The ft_toupper function converts a lower-case letter to the
@@ -187,30 +223,9 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
  */
 void	*ft_memset(void *b, int c, size_t len);
 
-/**
- * @brief The memchr() function locates the first occurrence 
- * of c (converted to an unsigned char) in string s.
- * @param s String	
- * @param c Character to locate
- * @param n Numbers ob bytes to search c into s.
- * @return The memchr() function returns a pointer to the byte 
- * located, or NULL if no such byte exists within n bytes.
- */
-void	*ft_memchr(const void *s, int c, size_t n);
 
-/**
- * @brief The memcmp() function compares byte string s1 against byte
- *  string s2. Both strings are assumed to be n bytes long.
- * @param s1 String 1, (memory)
- * @param s2 String 2 (memory)
- * @param n Number of bytes to compare
- * @return The memcmp() function returns zero if the two strings are 
- * identical, oth-erwise otherwise returns the difference between the
- * first two differing bytes(treated as unsigned char values, so that
- * `\200' is greater than `\0', for example).
- * Zero-length strings are always identical.
- */
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+
 
 /**
  * @brief  The memcpy() function copies n bytes from memory area s2 to 
