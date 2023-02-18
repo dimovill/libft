@@ -121,7 +121,7 @@ char	*ft_itoa(int n);
  */
 void	*ft_memchr(const void *s, int c, size_t n);
 
-/**
+/**				MEMCMP
  * @brief The memcmp() function compares byte string s1 against byte
  *  string s2. Both strings are assumed to be n bytes long.
  * @param s1 String 1, (memory)
@@ -135,6 +135,28 @@ void	*ft_memchr(const void *s, int c, size_t n);
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
+/**				MEMCPY
+ * @brief  The memcpy() function copies n bytes from memory area s2 to 
+ * memory area s1. If s1 and s2 overlap, behavior is undefined. 
+ * Applications in which s1 and s2 might overlap should use 
+ * memmove(3) instead.
+ * @param s1 String destiny (memory)
+ * @param s2 String Source (memory)
+ * @param n Number of byte to copy.
+ * @return Pointer to string destiny.
+ */
+void	*ft_memcpy(void *s1, const void *s2, size_t n);
+
+/**				MEMMOVE
+ * @brief The memmove() function copies n bytes from string s2 to 
+ * string s1.  The two strings may overlap; the copy is always 
+ * done in a non-destructive manner.
+ * @param s1 String destiny
+ * @param s2 String source
+ * @param n Number of bytes to copy
+ * @return The String s1 copied with de characters of s2 n bytes.
+ */
+void	*ft_memmove(void *s1, const void *s2, size_t n);
 
 
 
@@ -227,28 +249,9 @@ void	*ft_memset(void *b, int c, size_t len);
 
 
 
-/**
- * @brief  The memcpy() function copies n bytes from memory area s2 to 
- * memory area s1. If s1 and s2 overlap, behavior is undefined. 
- * Applications in which s1 and s2 might overlap should use 
- * memmove(3) instead.
- * @param s1 String destiny (memory)
- * @param s2 String Source (memory)
- * @param n Number of byte to copy.
- * @return Pointer to string destiny.
- */
-void	*ft_memcpy(void *s1, const void *s2, size_t n);
 
-/**
- * @brief The memmove() function copies n bytes from string s2 to 
- * string s1.  The two strings may overlap; the copy is always 
- * done in a non-destructive manner.
- * @param s1 String destiny
- * @param s2 String source
- * @param n Number of bytes to copy
- * @return The String s1 copied with de characters of s2 n bytes.
- */
-void	*ft_memmove(void *s1, const void *s2, size_t n);
+
+
 
 /**
  * @brief The strlcpy() function copies up to size - 1 characters from the
