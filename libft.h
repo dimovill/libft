@@ -168,6 +168,144 @@ void	*ft_memmove(void *s1, const void *s2, size_t n);
  */
 void	*ft_memset(void *b, int c, size_t len);
 
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+/**
+ * @brief 
+ * @param s 
+ * @param c 
+ * @return 
+ */
+char	**ft_split(char const *s, char c);
+
+/**			STRCHR
+ * @brief The strchr() function locates the FIRST occurrence of c
+ * (converted to a		 char) in the string pointed to by s.  The 
+ * terminating null character is considered to be part of the string;
+ * therefore if c is `\0', the functions locate the terminating `\0'.
+ * @param s A string
+ * @param c Character we want to locate
+ * @return a pointer to the located character.
+ */
+char	*ft_strchr(const char *s, int c);
+
+/**				STRDUP
+ * @brief The strdup() function allocates sufficient memory for a copy of the
+     string s1, does the copy, and returns a pointer to it.  The pointer may
+     subsequently be used as an argument to the function free(3).
+
+     If insufficient memory is available, NULL is returned and errno is set to
+     ENOMEM.
+ * @param s String to be copied	
+ * @return A pointer to the new string
+ */
+char	*ft_strdup(const char *s);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/**				STRJOIN
+ * @brief Rerserve memory with malloc and Join two strings.
+ * @param s1 First string
+ * @param s2 String to join to s1
+ * @return Return null if reserve memory si failed. Return
+ * a new string, that is the result to join s1 and s2
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/**				STRLCAT
+ * @brief  The ft_strlcat() function appends the NUL-terminated string src
+ * to the end of dst.  It will append at most size - strlen(dst) - 1 bytes,
+ * terminating the result.
+ * @param dst String destiny
+ * @param src String Source
+ * @param size n Bytes to concatenate.
+ * @return The ft_strlcat() functions return the total length of
+ * the string they tried to create.For strlcat() that means the initial
+ * length of dst plus the length of src.  While this may seem somewhat 
+ * confusing it was done to make trunca-tion truncation detection simple.
+ */
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+/**				STRLCPY
+ * @brief The strlcpy() function copies up to size - 1 characters from the
+ *  NUL-terminated string src to dst, NUL-terminating 
+ * the result.
+ * @param dst String destiny
+ * @param src String source
+ * @param dstsize Number -1 bytes copies.
+ * @return The strlcpy() function return the total 
+ * length of the string they tried to create. For strlcpy() that means
+ * the length of src.
+ */
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+
+/**				STRLEN
+ * @brief The ft_strlen function computes the length of the string array.
+ * @param array 
+ * @return  The ft_strlen function returns the number of characters that 
+ * precede the terminating NUL character.
+ */
+size_t	ft_strlen(char *array);
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/**				STRNCMP
+ * @brief The strcmp() and strncmp() functions lexicographically compare
+ *  the null-terminated terminated strings s1 and s2.
+ * The strncmp() function compares not more than n characters.  Because
+ * strncmp() is designed for comparing strings rather than binary data,
+ * characters that appear after a `\0' character are not compared.
+ * @param s1 String 1
+ * @param s2 String 2
+ * @param n The number of characters to compare
+ * @return The strcmp() and strncmp() return an integer greater than, equal
+ *  to, or less than 0, according as the string s1 is greater than, equal to,
+ *  or less than the string s2.  The comparison is done using unsigned
+ *  characters, characters, so that `\200' is greater than `\0'.
+ */
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
+
+/**
+ * @brief The strnstr() function locates the first occurrence of the
+ *  null-termi-nated null-terminated string s2 in the string s1,
+ * where not more than n characters are searched. Characters that appear
+ *  after a `\0' character are not searched.
+ * @param grande Big string tha must be looked.
+ * @param pequeno  Small string will be searched in s
+ * @param len Number of bytes fron s must be looked.
+ * @return If find is an empty string, s is returned; if find occurs nowhere
+ *  in s, NULL is returned; otherwise a pointer to the first character of the
+ * first occurrence of s2 is returned
+ */
+char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
+
+/**			STRRCHR
+ * @brief The strrchr() function locates the LAST occurrence of c
+ * (converted to a		 char) in the string pointed to by s.  The 
+ * terminating null character is considered to be part of the string;
+ * therefore if c is `\0', the functions locate the terminating `\0'.
+ * @param s A string
+ * @param c Character we want to locate
+ * @return a pointer to the located character.
+ */
+char	*ft_strrchr(const char *s, int c);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -197,51 +335,6 @@ int		ft_toupper(int c);
  */
 int		ft_tolower(int d);
 
-/**			STRCHR
- * @brief The strchr() function locates the FIRST occurrence of c
- * (converted to a		 char) in the string pointed to by s.  The 
- * terminating null character isconsidered to be part of the string;
- * therefore if c is `\0', the functions locate the terminating `\0'.
- * @param s A string
- * @param c Character we want to locate
- * @return a pointer to the located character.
- */
-char	*ft_strchr(const char *s, int c);
-
-/**			STRRCHR
- * @brief The strrchr() function locates the LAST occurrence of c
- * (converted to a		 char) in the string pointed to by s.  The 
- * terminating null character isconsidered to be part of the string;
- * therefore if c is `\0', the functions locate the terminating `\0'.
- * @param s A string
- * @param c Character we want to locate
- * @return a pointer to the located character.
- */
-char	*ft_strrchr(const char *s, int c);
-
-/**
- * @brief The ft_strlen function computes the length of the string array.
- * @param array 
- * @return  The ft_strlen function returns the number of characters that 
- * precede the terminating NUL character.
- */
-size_t	ft_strlen(char *array);
-
-/**
- * @brief The strcmp() and strncmp() functions lexicographically compare
- *  the null-terminated terminated strings s1 and s2.
- * The strncmp() function compares not more than n characters.  Because
- * strncmp() is designed for comparing strings rather than binary data,
- * characters that appear after a `\0' character are not compared.
- * @param s1 String 1
- * @param s2 String 2
- * @param n The number of characters to compare
- * @return The strcmp() and strncmp() return an integer greater than, equal
- *  to, or less than 0, according as the string s1 is greater than, equal to,
- *  or less than the string s2.  The comparison is done using unsigned
- *  characters, characters, so that `\200' is greater than `\0'.
- */
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 
 
@@ -255,62 +348,6 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 
 
-/**
- * @brief The strlcpy() function copies up to size - 1 characters from the
- *  NUL-terminated string src to dst, NUL-terminating 
- * the result.
- * @param dst String destiny
- * @param src String source
- * @param dstsize Number -1 bytes copies.
- * @return The strlcpy() function return the total 
- * length of the string they tried to create. For strlcpy() that means
- * the length of src.
- */
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-
-/**
- * @brief The strnstr() function locates the first occurrence of the
- *  null-termi-nated null-terminated string s2 in the string s1,
- * where not more than n characters are searched. Characters that appear
- *  after a `\0' character are not searched.
- * @param grande Big string tha must be looked.
- * @param pequeno  Small string will be searched in s
- * @param len Number of bytes fron s must be looked.
- * @return If find is an empty string, s is returned; if find occurs nowhere
- *  in s, NULL is returned; otherwise a pointer to the first character of the
- * first occurrence of s2 is returned
- */
-char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
-
-/**
- * @brief  The ft_strlcat() function appends the NUL-terminated string src
- * to the end of dst.  It will append at most size - strlen(dst) - 1 bytes,
- * terminating the result.
- * @param dst String destiny
- * @param src String Source
- * @param size n Bytes to concatenate.
- * @return The ft_strlcat() functions return the total length of
- * the string they tried to create.For strlcat() that means the initial
- * length of dst plus the length of src.  While this may seem somewhat 
- * confusing it was done to make trunca-tion truncation detection simple.
- */
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-
-
-
-
-
-/**
- * @brief The strdup() function allocates sufficient memory for a copy of the
-     string s1, does the copy, and returns a pointer to it.  The pointer may
-     subsequently be used as an argument to the function free(3).
-
-     If insufficient memory is available, NULL is returned and errno is set to
-     ENOMEM.
- * @param s String to be copied	
- * @return A pointer to the new string
- */
-char	*ft_strdup(const char *s);
 
 /**
  * @brief Reserves and Returns a specified substring from a string.
@@ -322,14 +359,6 @@ If length is 0, the output is blank.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-/**
- * @brief Rerserve memory with malloc and Join two strings.
- * @param s1 First string
- * @param s2 String to join to s1
- * @return Return null if reserve memory si failed. Return
- * a new string, that is the result to join s1 and s2
- */
-char	*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief Delete all string set in s1, since the begining and
@@ -341,13 +370,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  */
 char	*ft_strtrim(char const *s1, char const *set);
 
-/**
- * @brief 
- * @param s 
- * @param c 
- * @return 
- */
-char	**ft_split(char const *s, char c);
+
 
 
 

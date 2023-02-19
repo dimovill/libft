@@ -72,16 +72,7 @@ int	ft_toupper(int c);
  */
 int	ft_tolower(int d);
 
-/**			STRCHR
- * @brief The strchr() function locates the FIRST occurrence of c
- * (converted to a		 char) in the string pointed to by s.  The 
- * terminating null character isconsidered to be part of the string;
- * therefore if c is `\0', the functions locate the terminating `\0'.
- * @param s A string
- * @param c Character we want to locate
- * @return a pointer to the located character.
- */
-char *ft_strchr(const char *s, int c);
+
 
 /**			STRRCHR
  * @brief The strrchr() function locates the LAST occurrence of c

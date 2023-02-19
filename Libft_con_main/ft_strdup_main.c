@@ -10,12 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 /*The strdup() function returns a pointer to a new string
 characters that is a duplicate of the string pointed to by s.
 The memory for the new string is obtained automatically with
-malloc(3), and can (and should) be freed with free(3).*/
+malloc(3), and can (and should) be freed with free(3)*/
 #include <stddef.h> // Valida el identificador NULL
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
@@ -37,3 +40,16 @@ char	*ft_strdup(const char *s)
 	destino[i] = '\0';
 	return (destino);
 }
+
+
+int main()
+{
+	char s[] = "Hola amigos";
+
+	printf("s=     %s\n", s);
+	printf("strdup=      %s\n", strdup(s));
+	printf("ft_strdup=    %s\n", ft_strdup(s));
+
+	return 0;
+}
+

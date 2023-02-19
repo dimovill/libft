@@ -10,7 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <stddef.h> // Valida el identificador NULL
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int	ft_strlen(const char *array)
+{
+	int	cont;
+
+	cont = 0;
+	while (array[cont] != '\0')
+	{
+		cont++;
+	}
+	return (cont);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -31,4 +47,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (idst < size)
 		dst[idst + jsrc] = '\0';
 	return (ft_strlen(src) + idst);
+}
+
+int main()
+{
+    char src[] = "hello";
+    char dst[20] = "world";
+    size_t result = ft_strlcat(dst, src, sizeof(dst));
+    printf("Concatenated string: %s\n", dst);
+    printf("Length of concatenated string: %lu\n", result);
+    return 0;
 }
