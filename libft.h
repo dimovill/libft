@@ -296,35 +296,25 @@ char	*ft_strnstr(const char *grande, const char *pequeno, size_t len);
  */
 char	*ft_strrchr(const char *s, int c);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**			TOUPPER
- * @brief The ft_toupper function converts a lower-case letter to the
- * corresponding upper-case letter.
- * Google: toupper function code mac
- * @param c Lowercase character
- * @return Return c converted in Uppercase.
+/**			STRTRIM
+ * @brief Delete all string set in s1, since the begining and
+ * since the end. The function stop when a character non 'set).
+ * @param s1 The original string.
+ * @param set Charaters that can be delete in s1
+ * @return The result string with malloc reserve.
+ * @return Null if reserve is fail.
  */
-int		ft_toupper(int c);
+char	*ft_strtrim(char const *s1, char const *set);
+
+/**				SUBSTR
+ * @brief Reserves and Returns a specified substring from a string.
+ * @param s The value to extract the substring from.
+ * @param start The starting character position of the substring
+ * @param len The number of characters in the substring.
+If length is 0, the output is blank.
+ * @return The substring. Null if the memory reserve fail.
+ */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**			TOLOWER
  * @brief The ft_tolower function converts a upper-case letter to the
@@ -335,40 +325,55 @@ int		ft_toupper(int c);
  */
 int		ft_tolower(int d);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * @brief Reserves and Returns a specified substring from a string.
- * @param s The value to extract the substring from.
- * @param start The starting character position of the substring
- * @param len The number of characters in the substring.
-If length is 0, the output is blank.
- * @return The substring. Null if the memory reserve fail.
+/**			TOUPPER
+ * @brief The ft_toupper function converts a lower-case letter to the
+ * corresponding upper-case letter.
+ * Google: toupper function code mac
+ * @param c Lowercase character
+ * @return Return c converted in Uppercase.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_toupper(int c);
 
 
-/**
- * @brief Delete all string set in s1, since the begining and
- * since the end. The function stop when a character non 'set).
- * @param s1 The original string.
- * @param set Charaters that can be delete in s1
- * @return The result string with malloc reserve.
- * @return Null if reserve is fail.
- */
-char	*ft_strtrim(char const *s1, char const *set);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
