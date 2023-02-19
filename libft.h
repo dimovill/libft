@@ -168,12 +168,35 @@ void	*ft_memmove(void *s1, const void *s2, size_t n);
  */
 void	*ft_memset(void *b, int c, size_t len);
 
+/**				PUTCHAR_FD
+ * @brief Send the 'c' character to the file descriptor given like a 
+ * parameter
+ * @param c The character to send
+ * @param fd The file descriptor tha recive the character
+ */
 void	ft_putchar_fd(char c, int fd);
 
+/**				PUTENDL_FD
+ * @brief Send a string to the file descriptor given like a
+ * parameter. We send too an endline (\n)
+ * @param s String to send
+ * @param fd The file descriptor that recive de string.
+ */
 void	ft_putendl_fd(char *s, int fd);
 
+/**
+ * @brief 
+ * @param n 
+ * @param fd 
+ */
 void	ft_putnbr_fd(int n, int fd);
 
+/**				PUTSTR_FD
+ * @brief Send a string to the file descriptor given like a 
+ * parameter
+ * @param s String to send
+ * @param fd The file descriptor that recive the string
+ */
 void	ft_putstr_fd(char *s, int fd);
 
 /**
@@ -207,6 +230,14 @@ char	*ft_strchr(const char *s, int c);
  */
 char	*ft_strdup(const char *s);
 
+/**				STRITERI
+ * @brief To each character of the string ’s’, apply the function 
+ * ’f’ giving as parameters the index of each character within ’s’ 
+ * and the address of the character itselfcharacter, which can be 
+ * modified if necessary.
+ * @param s String to iter 
+ * @param f The function which must be apply in each character.
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**				STRJOIN
@@ -253,7 +284,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
  */
 size_t	ft_strlen(char *array);
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/**				STRMAPI
+ * @brief To each character of the string ’s’, apply the ’f’ function 
+ * giving as parameters the index of each character within ’s’ and the 
+ * character itself. Generates a new string with the result of the successive
+ *  use of ’f’
+ * @param s String
+ * @param f The function which must be apply in each character.
+ * @return A new string with the correct function 'f' use in each character
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**				STRNCMP
  * @brief The strcmp() and strncmp() functions lexicographically compare
@@ -336,47 +376,86 @@ int		ft_toupper(int c);
 
 
 
+// 					BONUS TRACK
 
+/**				FT_LSTADD_BACK
+ * @brief Add the 'new' node at the end of the list.
+ * @param lst Pointer to the first node
+ * @param new Pointer to new node to add at the end of the list.
+ * @return Noting. It's a void funcion.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
+/**				FT_LSTADD_FRONT
+ * @brief Add the 'new' node at the begining of the list
+ * @param lst The address of the first pointer node of the list 
+ * @param new Pointer to the node that we want to add at the begining of 
+ * the list
+ * @return It's a void function. Return nothing.
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
+/**				FT_LSTCLEAR
+ * @brief Erase and release the node 'lst' and consecutives. Use the function
+ * del and free
+ * @param lst Direction to a pointer
+ * @param del A pointer to a function used to delete the content of the node
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 
+/**				FT_LSTDELONE
+ * @brief It takes a ’lst’ node as a parameter and frees the memory
+ * of the contents using the ’del’ function given as a parameter, 
+ * in addition to freeing the node. The memory of 'next' should not be freed.
+ * @param lst The node to release
+ * @param del A pointer to the function used to release the content of the
+ * node
+ * @return Nothing
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
+/**				FT_LSTITER
+ * @brief Iter the list ¡lst' and apply the function 'f' in the contento of
+ * each node
+ * @param lst A pointer to the first node 
+ * @param f A pointer to the function that used in each node
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
+/**				FT_LSTLAST
+ * @brief Show the las node in a list
+ * @param lst The first node
+ * @return The last node
+ */
+t_list	*ft_lstlast(t_list *lst);
 
+/**
+ * @brief Iterate the list 'lst' and apply the function 'f' on the content
+ * of each node. Creates a list resulting from the correct and successive
+ * application of the 'f' function on each node. The 'del' function is used
+ * to remove the contents of a node if it's necessary.
+ * @param lst A pointer to a node
+ * @param f The direction to a function pointer used in each node
+ * @param del A pointer to the function used to release de the content of a
+ * node if it's necesary
+ * @return A new list. Null if the reserve os memory fail
+ */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+/**				FT_LSTNEW
+ * @brief Create a new node using malloc(3). The ’content’ member variable
+ * is initialized with the content of the ’content’ parameter. 
+ * The variable 'next', with NULL.
+ * @param content The information/content to create a new nodo
+ * @return A new node. Must be reserve by malloc
+ */
+t_list	*ft_lstnew(void *content);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**				FT_LSTSIZE
+ * @brief Count the number of nodes
+ * @param lst The begining node of the list
+ * @return The length of the list
+ */
+int	ft_lstsize(t_list *lst);
 
 #endif
